@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "backend": "npx nx serve server --configuration=production",
-    "build-backend": "npx nx build server --configuration=production"
+    "server": "npx prisma generate --schema=./apps/server/prisma/schema.prisma && npx nx serve server --configuration=production",
+    "bserver": "npx prisma generate --schema=./apps/server/prisma/schema.prisma && npx nx build server --configuration=production"
   },
   "private": true,
   "dependencies": {
@@ -16,9 +16,9 @@
     "@angular/platform-browser": "~15.2.0",
     "@angular/platform-browser-dynamic": "~15.2.0",
     "@angular/router": "~15.2.0",
-    "@nestjs/common": "^9.0.0",
+    "@nestjs/common": "^9.4.0",
     "@nestjs/config": "^2.3.1",
-    "@nestjs/core": "^9.0.0",
+    "@nestjs/core": "^9.4.0",
     "@nestjs/jwt": "^10.0.3",
     "@nestjs/passport": "^9.0.3",
     "@nestjs/platform-express": "^9.0.0",
