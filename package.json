@@ -2,7 +2,10 @@
   "name": "nmbrs-nx",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "backend": "npx nx serve server --configuration=production",
+    "build-backend": "npx nx build server --configuration=production"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",
