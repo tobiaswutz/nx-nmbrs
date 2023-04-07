@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
-import { PrismaClient, Prisma } from '@prisma/client'
+// import { PrismaClient, Prisma } from '@prisma/client'
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 // import * as argon from 'argon2';
@@ -30,7 +30,7 @@ export class AuthService {
       });
       return this.signToken(user.id, user.email);
     } catch (error) {
-      if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') { throw new ForbiddenException('Email already in use'); }
+      // if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') { throw new ForbiddenException('Email already in use'); }
       throw error;
     }
   }
