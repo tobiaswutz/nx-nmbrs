@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "server": "npx nx serve server --configuration=production",
-    "bserver": "npx prisma generate && npx nx build server --configuration=production"
+    "bserver": "npx prisma generate --schema=./apps/server/prisma/schema.prisma && npx nx build server --configuration=production"
   },
   "private": true,
   "dependencies": {
